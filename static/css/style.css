@@ -128,7 +128,7 @@ section {
 /* portfolio */
 
 #portfolio {
-    background: url(../images/geoo.jpg) no-repeat;
+    background: url('../images/geoo.jpg') no-repeat;
     background-size: cover;
     background-position: center;
     overflow: hidden;
