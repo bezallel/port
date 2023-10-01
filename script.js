@@ -34,6 +34,10 @@ window.onscroll = () => {
 
     }); 
 
+    window.addEventListener('scroll', () => {
+        document.querySelector('nav').classList.toggle('window-scrolled', window.scrollY > 0);
+    })
+
 
     let header = document.querySelector('header');
 
@@ -49,3 +53,28 @@ document.getElementById('prev').onclick = function(){
     let lists = document.querySelectorAll('.item');
     document.getElementById('slide').prepend(lists[lists.length - 1]);
 }
+
+
+
+// Ensure the DOM is loaded before executing JavaScript
+document.addEventListener('DOMContentLoaded', function () {
+    const certificationsLink = document.getElementById('certifications-link');
+    const certificationsPopup = document.getElementById('popup-certifications');
+
+    certificationsLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        toggleCertificationsPopup();
+    });
+
+    certificationsPopup.addEventListener('click', function (e) {
+        e.stopPropagation();
+    });
+
+    function toggleCertificationsPopup() {
+        if (certificationsPopup.classList.contains('show')) {
+            certificationsPopup.classList.remove('show');
+        } else {
+            certificationsPopup.classList.add('show');
+        }
+    }
+});
