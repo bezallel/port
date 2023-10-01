@@ -198,14 +198,14 @@ section {
 
 .item:nth-child(n+6) {
     left: calc(50% + 660px);
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 .item .content {
     position: absolute;
     top: 50%;
     left: 50px;
-    width: 300px;
+    width: 280px;
     text-align: left;
     padding: 0;
     color: whitesmoke;
@@ -232,16 +232,25 @@ section {
     animation: showcontent 1s ease-in-out 0.3s 1 forwards;
 }
 .item .des {
+    font-size: 20px;
     margin: 20px 0;
     opacity: 0;
     animation: showcontent 1s ease-in-out 0.6s 1 forwards;
 }
 
 .item button {
+    height: 40px;
+    width: 98px !important;
     padding: 10px 20px;
     border: none;
-    opacity: 0;
-    animation: showcontent 1s ease-in-out 0.9s 1 forwards;
+    background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);
+    border-radius: 10px; 
+    box-shadow: 1px 1px 5px #5f5b52, -3px -3px 10px #51442f; 
+    transition: transform 0.2s ease-in-out;
+}
+
+.item button:hover {
+    transform: scale(1.05); 
 }
 
 @keyframes showcontent {
@@ -265,18 +274,25 @@ section {
 }
 
 .buttons button {
-    width: 50px;
-    height: 50px;
-    /* border-radius: 50%; */
-    border: none;
-    background: none;
-    color: white;
-    font-size: 20px;
-    font-weight: 100;
-    transition: 0.5s;
+    height: 40px;
+    width: 40px;
+    background-color: orange;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 40px;
+    box-shadow: 5px 5px 10px rgba(15, 14, 11, 0.2), -3px -3px 10px rgba(98, 96, 89, 0.5); 
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+.buttons button i {
+    color: rgb(60, 42, 42); 
 }
 
-
+button:hover {
+    transform: scale(1.05); 
+}
+.buttons button:active {
+    transform: scale(0.95);
+}
 
 /* end portfolio */
 
@@ -288,6 +304,10 @@ section {
         width: 100%;
         height: auto;
         padding: 70px 0px;
+    }
+    .buttons button{
+        background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%); /* Background color for the neumorphic effect */
+        color: white;
     }
 }
 
@@ -356,6 +376,16 @@ section {
         font-size: 10px;
         font-weight: bold;
     }
+    .item button{
+        font-size: 12px;
+        width: 60px !important;
+        align-items: center !important;
+    }
+    .buttons button{
+        background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%); /* Background color for the neumorphic effect */
+        color: white;
+    }
+    
    
 }
 @media screen and (max-width: 1200px){
@@ -422,6 +452,15 @@ section {
     .item .des{
         font-size: 15px;
         font-weight: bold;
+    }
+    .item button{
+        font-size: 12px;
+        width: 60px !important;
+        align-items: center !important;
+    }
+    .buttons button{
+        background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%); /* Background color for the neumorphic effect */
+        color: white;
     }
 }
 
@@ -511,6 +550,15 @@ section {
         font-weight: 100;
         transition: 0.5s;
     }
+    .item button{
+        font-size: 12px;
+        width: 60px !important;
+        align-items: center !important;
+    }
+    .buttons button{
+        background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%); /* Background color for the neumorphic effect */
+        color: white;
+    }
 }
 /* end 650 */
 
@@ -581,6 +629,15 @@ section {
     .item .des{
         font-size: 10px;
         font-weight: bold;
+    }
+    .item button{
+        font-size: 12px;
+        width: 60px !important;
+        align-items: center !important;
+    }
+    .buttons button{
+        background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%); /* Background color for the neumorphic effect */
+        color: white;
     }
 }
 
@@ -673,12 +730,22 @@ section {
         font-weight: 100;
         transition: 0.5s;
     }
+    .item button{
+        font-size: 12px;
+        width: 60px !important;
+        align-items: center !important;
+    }
+    .buttons button{
+        background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%); /* Background color for the neumorphic effect */
+        color: white;
+    }
 }
 /* end 350 */
 
 /* start 390 */
 @media screen and (max-width: 390px){
     .container  {
+        left: 11%;
         height: auto;
         padding: 100px 0px;
         background-size: cover;
@@ -767,6 +834,15 @@ section {
         display: flex;
         gap: 20px;
         left: -65px;
+    }
+    .item button{
+        font-size: 12px;
+        width: 60px !important;
+        align-items: center !important;
+    }
+    .buttons button{
+        background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%); /* Background color for the neumorphic effect */
+        color: white;
     }
 }
 /* end 390 */
@@ -862,11 +938,21 @@ section {
         gap: 20px;
         left: -90px;
     }
+    .item button{
+        font-size: 12px;
+        width: 60px !important;
+        align-items: center !important;
+    }
+    .buttons button{
+        background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%); /* Background color for the neumorphic effect */
+        color: white;
+    }
 }
 /* end of 360 */
 /* start of 412 */
 @media screen and (max-width: 414px){
     .container  {
+        left: 11% !important;
         height: auto;
         padding: 100px 0px;
         background-size: cover;
@@ -956,8 +1042,27 @@ section {
         gap: 20px;
         left: -70px;
     }
+    .item button{
+        font-size: 12px;
+        width: 60px !important;
+        align-items: center !important;
+    }
+    .buttons button{
+        background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%); /* Background color for the neumorphic effect */
+        color: white;
+    }
 }
 /* end of 412 */
+/*start 712*/
+
+@media screen and (max-width: 712px) {
+    .container{
+        width: 40px !important;
+        left: 2%;
+    }
+    
+}
+/*end 712*/
 /* start of 280 */
 @media screen and (max-width: 280px){
     .container  {
@@ -1042,6 +1147,15 @@ section {
         font-size: 20px;
         font-weight: 100;
         transition: 0.5s;
+    }
+    .item button{
+        font-size: 12px;
+        width: 60px !important;
+        align-items: center !important;
+    }
+    .buttons button{
+        background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%); /* Background color for the neumorphic effect */
+        color: white;
     }
 }
 /* end of 280 */
