@@ -765,10 +765,10 @@ button:hover {
         left: calc(10% + 160px);
         opacity: 0;
     }
-    .item .name{
+     .item .name{
         font-size: 10px;
         font-weight: bold;
-        margin-top: -30px;
+        margin-top: -30px !important;
     }
     .item .cat{
         font-size: 10px;
@@ -778,7 +778,7 @@ button:hover {
         font-size: 10px;
         font-weight: bold;
         margin-top: 8px;
-        height: 100px;
+        height: 120px;
         width: 180px;
     }
     .item button{
