@@ -1774,9 +1774,9 @@ button:hover {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
         padding: 20px;
         z-index: 1000;
-        right: -20%;
+        right: -50%;
         top: 120% !important;
-        margin-top: -30%;
+        margin-top: -10%;
         width: 250px;
         height: 150px;
         align-items: center;
