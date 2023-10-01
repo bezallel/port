@@ -712,11 +712,12 @@ button:hover {
         text-align: center; /*i added this to center your name*/
         padding: 0 39% 0 42%;
     }
-    .container  {
+     .container  {
         height: auto;
         padding: 200px 0px;
         background-size: cover;
         top: 119%;
+        margin-top: 16%;
         transform: translate(-50% 50%);
         width: 100px;
         height: 60px;
@@ -767,7 +768,7 @@ button:hover {
     .item .name{
         font-size: 10px;
         font-weight: bold;
-        margin-top: -20px;
+        margin-top: -30px;
     }
     .item .cat{
         font-size: 10px;
@@ -776,7 +777,9 @@ button:hover {
     .item .des{
         font-size: 10px;
         font-weight: bold;
-        height: 90px;
+        margin-top: 8px;
+        height: 100px;
+        width: 180px;
     }
     .item button{
         font-size: 12px;
@@ -798,7 +801,7 @@ button:hover {
         z-index: 1000;
         right: -20%;
         top: 160% !important;
-        margin-top: -40%;
+        margin-top: -15% !important;
         width: 200px;
         height: 130px !important;
         align-items: center;
@@ -806,6 +809,8 @@ button:hover {
         color: orange;
         font-size: 12px;
     }
+}
+
 }
 
 /* end 440 */
