@@ -273,6 +273,21 @@ input:checked + label .description {
     }
     
 }
+   
+    @media screen and (max-width: 540px) and (min-height: 720px){
+      
+  }
+  
+  @media screen and (min-width: 550px) and (max-width: 850px) and (min-height: 500px) and (max-height: 1366px) {
+  
+  }
+  @media screen and (min-width: 1024px) and (min-height: 600px){
+    
+  }
+  
+  @media screen and (max-width: 1024px) and (min-height: 1366px){
+   
+  }
   
   @media screen and (max-width: 400px) and (min-width: 390px){
     .content {
@@ -417,6 +432,57 @@ input:checked + label .description {
   }
 
   @media screen and (max-width: 385px) and (min-width: 360px){
+    .content {
+        width: 500px;
+        height: 500px;
+    }
+    
+    .content .info h1 {
+        display: none;
+    }
+    
+    .content .info p {
+        display: none;
+    }
+    
+    .info{
+        display: none;
+    }
+    input:checked + label {
+        width: 180px;
+    }
+    
+    .card{
+        width: 32px;
+        border-radius: .75rem;
+        background-size: cover;
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: 2rem;
+        margin: 0 4px;
+        display: flex;
+        align-items: flex-end;
+        transition: .6s cubic-bezier(.28, -0.03,0,.99);
+        box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+    }
+
+    .description h4 {
+        font-size: 12px;
+    }
+    
+    .card > .row > .icon {
+        width: 20px;
+        height: 20px;
+        margin: 5px;
+    } 
+    
+    .description p {
+        color: #b0b0ba;
+        padding-top: 5px;
+    }
+    
+  }
+  @media screen and (max-width: 384px) and (min-width: 384px){
     .content {
         width: 500px;
         height: 500px;
