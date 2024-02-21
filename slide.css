@@ -1,0 +1,311 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+body {
+    background-image: url(./static/images/vizbgrnd.jpg);
+}
+
+section{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./static/images/abb5.jpg);
+    min-height: 100vh;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background: linear-gradient(180deg, 
+    rgba(255,255,255, 0.28) 0%, 
+    rgba(255, 255, 255, 0) 100%);
+    backdrop-filter: blur(30px);
+    border-radius: 20px;
+    width: min(1100px, 100%);
+    height: 600px;
+    box-shadow: 0 0.5px 0 1px rgba(255, 255, 255, 0.23)
+    inset, 0 1px 0 0 rgba(255, 255, 255, 0.66) 
+    inset, 0 4px 16px rgba(0, 0, 0, 0.12);
+    z-index: 10;
+}
+
+.content .info h1 {
+    font-size: 35px;
+    font-weight: bold;
+    color: #fff; /* Change the color as needed */
+    margin-bottom: 10px; /* Adjust spacing */
+}
+
+.content .info p {
+    font-size: 14px;
+    color: #fff; /* Change the color as needed */
+   
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 350px;
+    max-height: 450px;
+    padding: 0 18px;
+    text-align: center;
+}
+
+/* .alum-night {
+    background: linear-gradient(225deg, #ff3cac 0%,
+    #784ba0 50%, #2b86c5 100%);
+} */
+
+.btn {
+    display: block;
+    padding: 10px 40px;
+    margin: 10px auto;
+    font-size: 1.1rem;
+    font-weight: 700;
+    outline: none;
+    border-radius: 4px;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.23);
+    cursor: pointer;
+}
+
+.btn:hover, .btn:focus, .btn:active, .btn:visited {
+    transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8 );
+    animation: gelatine 0.5s 1;
+}
+
+@keyframes gelatine {
+    0%, 100% {
+        transform: scale(1,1);
+    }
+    25% {
+        transform: scale(0.9, 1.1);
+    }
+    50% {
+        transform: scale(1.1, 0.9);
+    }
+    75% {
+        transform: scale(0.95, 1.05);
+    }
+}
+
+.gelatin-effect:hover, .gelatin-effect:focus, .gelatin-effect:active, .gelatin-effect:visited {
+    transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8 );
+    animation: gelatine 0.5s 1;
+}
+
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.card{
+    width: 55px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28, -0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.card > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card > .row > .icon {
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+} 
+.card > .row > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+} 
+
+.description p {
+    color: #b0b0ba;
+    padding-top: 5px;
+}
+
+.description h4 {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+}
+
+.description a {
+    text-decoration: none;
+    color: inherit;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 300px;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.card[for="c1"] {
+    background-image: url(./static/images/markets.png);
+}
+.card[for="c2"] {
+    background-image: url(./static/images/supply.jpg);
+    background-size: cover;
+    background-position: center;
+    object-fit: contain;
+    overflow: hidden;
+}
+.card[for="c3"] {
+    background-image: url(./static/images/investment.jpg);
+    background-size: cover;
+    background-position: center;
+    object-fit: contain;
+    overflow: hidden;
+}
+.card[for="c4"] {
+    background-image: url(./static/images/HR-analytics.jpg);
+    background-size: cover;
+    background-position: center;
+    object-fit: contain;
+    overflow: hidden;
+}
+.card[for="c5"] {
+    background-image: url(./static/images/csoon.gif);
+    background-size: cover;
+    background-position: center;
+    object-fit: contain;
+    overflow: hidden;
+}
+/* .card[for="c6"] {
+     background-image: url(./static/images/csoon.gif);
+    background-size: cover;
+    background-position: center;
+    object-fit: contain;
+    overflow: hidden;
+} */
+
+
+/* .circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background-color: #ff3cac;
+    background-image: linear-gradient(225deg #ff3cac 0%, #784ba0 50%, #2b86c5 100%);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+}
+
+.circles li:nth-child(1) {
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+.circles li:nth-child(2) {
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+.circles li:nth-child(3) {
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+.circles li:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+.circles li:nth-child(5) {
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+.circles li:nth-child(6) {
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+} */
