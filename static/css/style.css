@@ -100,7 +100,7 @@ section {
 
 
 .home-content {
-    max-width: 60rem;
+    max-width: 160rem;
 }
 
 .home-content h1 {
@@ -111,7 +111,7 @@ section {
 
 .home-content .text-animate {
     position: relative;
-    width: 88rem; 
+    width: 38rem; 
     /* changed it to 28.8rem from 32.8 to center data science*/
     
 }
