@@ -318,6 +318,15 @@ input:checked + label .description {
   .modal-footer .btn:hover {
     background-color: #0b54b3;
   }
+
+  #modal-video {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-width: 90vw; /* Ensure the video doesn’t exceed the viewport width */
+    max-height: 80vh; /* Ensure the video doesn’t exceed the viewport height */
+    display: block;
+    margin: 0 auto;
+}
   
 
 @media screen and (min-height: 844px) and (max-height: 844px){
