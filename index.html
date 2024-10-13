@@ -1,122 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Peace Edogun</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyFolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="./sigh.css">
+    <style>
+      
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#home" class="logo">MyFolio</a>
 
-        <link rel="stylesheet" href="./style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <div class="bx bx-menu" id="menu-icon"></div>
 
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <!-- font awesome icons link -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <!-- iconscout cdn -->
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-        <!-- slick slider css link -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
-        
-    </head>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#portfolio">MyWorks</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-    <body>
-        
-        <header class="header">
-            <a href="#home" class="logo">MyFolio</a>
-
-            <div class="bx bx-menu" id="menu-icon"></div>
-
-            <nav class="navbar">
-                <a href="#home" class="active"></a>
-                <a href="#portfolio">MyWorks</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </header>
-
-        <section class="home" id="home">
-            <div class="home-content" >
-                <h1>PEACE  <br>EDOGUN</h1>
-                <div class="text-animate">
-                    <h3>DATA SCIENTIST</h3>
-                </div>
+    <section class="home" id="home"  style="background-image: url('./static/images/geo8.jpg');">
+        <div class="home-content">
+            <h1>PEACE <br> EDOGUN</h1>
+            <div class="text-animate">
+                <h3>DATA ANALYST</h3>
             </div>
-        </section>
+        </div>
+    </section>
 
-        
-        <!-- portfolio section -->
-        <section class="portfolio" id="portfolio">
-            <div class="container">
-                <div id="slide">
-                     <!-- start slide -->
-                    <div class="item" style="background-image: url(./static/images/geo13.jpg);">
-                        <div class="content">
-                            <div class="name">ANALYTICS.</div>
-                            <div class="des">Explore insightful data analysis using web-scraped data within Jupyter Notebook. </div>
-                            <a href="https://sqlanalytics.vercel.app/" target="_blank">
-                                <button>View</button>
-                            </a>
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio"  style="background-image: url('./static/images/geoo.jpg');">
+        <div class="container">
+            <!-- Category Filters -->
+            <!-- <div class="category-filters">
+                <button data-filter="all">All</button>
+                <button data-filter="analytics">Analytics</button>
+                <button data-filter="web-app">Web App</button>
+                <button data-filter="dashboard">Dashboard</button>
+            </div> -->
+
+            <div id="slide">
+                <!-- start slide -->
+               
+                <div class="item web-app">
+                    <video autoplay muted loop class="background-video">
+                        <source src="./murami.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="content">
+                        <div class="name">MURAMI</div>
+                        <div class="des">
+                            Murami, derived from the Yoruba term meaning "Prepare me," encapsulates the essence of this predictive model. Specifically designed for renters in Lagos City, it offers an annual price estimate, granting valuable insights into the housing rental market's pricing trends. By utilizing this tool, renters can gain a clearer understanding of what to expect in the market.
                         </div>
+                        <a href="https://murami.onrender.com" target="_blank">
+                            <button class="preview">View</button>
+                        </a>
                     </div>
-                    <!-- end slide -->
-                   
-                    <!-- start slide -->
-                    <div class="item" style="background-image: url(./static/images/abb2.jpg);">
-                        <div class="content">
-                            <div class="name">MURAMI.</div>
-                            <!-- <div class="cat">Web App</div> -->
-                            <div class="des">Murami, derived from the Yoruba term meaning "Prepare me," encapsulates the essence of this predictive model. <br> Specifically designed for renters in Lagos City, it offers an annual price estimate, granting valuable insights into the housing rental market's pricing trends. <br> By utilizing this tool, renters can gain a clearer understanding of what to expect in the market. </div>
-                            <a href="https://murami.onrender.com" target="_blank">
-                                <button>View</button>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- end slide -->
-                      <!-- start slide -->
-                    <div class="item" style="background-image: url(./static/images/abb.jpg);">
-                        <div class="content">
-                            <div class="name">SIBI.</div>
-                            <!-- <div class="cat">ChatBot</div> -->
-                            <div class="des">Ever wanted to be fluent in Pidgin?  <br> Sibi is your secret hack! <br> It effortlessly blends sentence structure and vibrant slangs.<br> With Sibi, you'll savor the essence of Nigerian culture without breaking a linguistic sweat. Dive in and let Sibi "Spoon-Feed" you into the heart of Nigerian conversations!</div>
-                            <a href="https://sibi.onrender.com" target="_blank">
-                                <button>View</button>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- end slide -->
-                      <!-- start slide -->
-                      <div class="item" style="background-image: url(./static/images/abbs.jpg);">
-                        <div class="content">
-                            <div class="name">MyViz!</div>
-                            <div class="cat">Dashboards</div>
-                            <div class="des">Featured visualizations created using Tableau, Excel(via Pivot), and HTML/CSS/JS.</div>
-                            <a href="slide.html" target="_blank">
-                                <button>View</button>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- end slide -->
-                   
-            
                 </div>
-                <div class="buttons">
-                    <button id="prev"><i class="fa-solid fa-chevron-left"></i></button>
-                    <button id="next"><i class="fa-solid fa-chevron-right"></i></button>
+                <!-- end slide -->
+
+                <!-- start slide -->
+                 
+                <div class="item dashboard">
+                    <video autoplay muted loop class="background-video">
+                        <source src="./sibideo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="content">
+                        <div class="name">SIBI</div>
+                        <div class="des">
+                            Ever wanted to be fluent in Pidgin? <br>
+                            Sibi is your secret hack! <br>
+                            It effortlessly blends sentence structure and vibrant slangs.<br>
+                            With Sibi, you'll savor the essence of Nigerian culture without breaking a linguistic sweat. <br>
+                            Dive in and let Sibi "Spoon-Feed" you into the heart of Nigerian conversations!
+                        </div>
+                        <a href="https://sibi.onrender.com" target="_blank">
+                            <button class="preview">View</button>
+                        </a>
+                    </div>
                 </div>
+                
+                <!-- end slide -->
+
+                <!-- start slide -->
+                <div class="item analytics" style="background-image: url('./static/images/geo13.jpg'); background-size: cover; background-repeat: no-repeat;">
+                    <div class="content">
+                        <div class="name">ANALYTICS</div>
+                        <div class="des">Explore insightful data analysis using web-scraped data and others collected from open-source platforms within Jupyter Notebook.</div>
+                        <a href="https://sqlanalytics.vercel.app/" target="_blank">
+                            <button class="preview">View</button>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- end slide -->
+
+                <!-- start slide -->
+                <div class="item dashboard" style="background-image: url('./static/images/abbs.jpg');">
+                    <div class="content">
+                        <div class="name">MyViz</div>
+                        <div class="des">Featured visualizations created using Tableau, Excel, and custom HTML/CSS/JS dashboards.</div>
+                        <a href="viz.html" target="_blank">
+                            <button class="preview">View</button>
+                        </a>
+                    </div>
+                </div>
+                <!-- end slide -->
             </div>
-        </section>
-    
 
-            
-            <!-- end of portfolio section -->
+            <div class="buttons">
+                <button id="prev"><i class="fa-solid fa-chevron-left"></i></button>
+                <button id="next"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
 
-        <section class="about" id="about">
-            <div class="contents">
-                    <img src="./static/images/about.jpg">
-                <div class="text">
-                    <h1>A LITTLE ABOUT ME <span>!</span></h1>
-                   <p>I've got 7 years of experience with 5 in data analytics and the last 2 which i've spent building algorithms (plus a couple of machine learning <span id="certifications-link" class="cert-link">certifications</span>). I made the transition from hospitality management to analytics, and these days, you'll likely find me daydreaming about my next career move. Data Scientist? Analyst? Machine Learning Enthusiast? Call me what you want, as long as there’s coffee involved. Well, unless it’s late... then tea will do just fine!</p>
-                    
+    <!-- About Section -->
+    <section class="about" id="about"  style="background-image: url('./static/images/roden7.png');">
+        <div class="contents">
+            <img src="./static/images/about.jpg" alt="About Image">
+            <div class="text">
+                <h1>A LITTLE ABOUT ME <span>!</span></h1>
+                    <p>I've got 7 years of experience with 5 in data analytics and the last 2 which i've spent building algorithms (plus a couple of machine learning <span id="certifications-link" class="cert-link">certifications</span>). I made the transition from hospitality management to analytics, and these days, you'll likely find me daydreaming about my next career move. Data Scientist? Analyst? Machine Learning Enthusiast? Call me what you want, as long as there’s coffee involved. Well, unless it’s late... then tea will do just fine!</p>
                     <div class="cert-popup" id="popup-certifications">
                         <!-- <p>Here are my certifications:</p> -->
                         <ul>
@@ -125,15 +141,16 @@
                             <li><i class='bx bxs-certification'></i> <a href="https://coursera.org/verify/specialization/XQ8YTXPDU2N8" target="_blank">Machine Learning for Production (MLOps)</a></li>
                         </ul>
                     </div>
-                
-                        <div class="home-sci">
-                            <a href="https://www.linkedin.com/in/peace-edogun/"><i class='bx bxl-linkedin'></i></a>
-                            <a href="https://github.com/dionamuH"><i class='bx bxl-github' ></i></a>
-                        </div>
-                </div> 
+
+                    <div class="home-sci">
+                        <a href="https://www.linkedin.com/in/peace-edogun-02a1a7a3/"><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://github.com/dionamuH"><i class='bx bxl-github' ></i></a>
+                    </div>
             </div>
-        </section>
-    
+        </div>
+    </section>
+
+    <!-- Footer Section -->
     <footer class="footer" id="contact">
         <div class="footer-text">
             <p>Designed by peaceedogun</p>
@@ -144,13 +161,11 @@
             <a href="#"><i class='bx bx-chevrons-up'></i></a>
         </div>
     </footer>
-    <!-- <script src="./main.js"></script> -->
-        <script src="./script.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-        <script>
-            
-            
-        </script>
-    </body>
+
+    <!-- JS Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="./sigh.js"></script>
+    
+</body>
 </html>
