@@ -1,83 +1,83 @@
-// JavaScript to handle the modal functionality
-function openModal(imageSrc, projectLink) {
+function openModal(mediaSrc, projectLink) {
     // Get modal elements
     const modal = document.getElementById("myModal");
     const modalImg = document.getElementById("modal-img");
+    const modalVideo = document.getElementById("modal-video");
     const modalLink = document.getElementById("modal-link");
 
-    // Change image source based on screen size
-    if (window.innerWidth <= 930) { // For smaller screens
-        if (imageSrc.includes("supply.png")) {
-            modalImg.src = './images/supplains.png'; // Smaller image for supply
-        } else if (imageSrc.includes("invest.png")) {
-            modalImg.src = './images/involi.png'; // Smaller image for invest
-        }
-        else if (imageSrc.includes("HR ANALYTIC.png")) {
-            modalImg.src = './images/atritt.png'; // Smaller image for invest
-        }
-        else if (imageSrc.includes("housing.png")) {
-            modalImg.src = './images/haus.png'; // Smaller image for invest
-        }
-        else if (imageSrc.includes("BUSINESS PERF.png")) {
-            modalImg.src = './images/busperf.png'; // Smaller image for invest
-        }
-        else if (imageSrc.includes("bank churn.png")) {
-            modalImg.src = './images/banny.png'; // Smaller image for invest
-        }
-        // Add more conditions as needed for other images
-        else {
-            modalImg.src = imageSrc; // Default for larger images
-        }
+    // Reset the modal content
+    modalImg.style.display = "none"; // Hide the image by default
+    modalVideo.style.display = "none"; // Hide the video by default
+    modalVideo.src = ""; // Clear previous video source
+
+    // Check if the media is a video (ends with .mp4)
+    if (mediaSrc.endsWith(".mp4")) {
+        // Show the video element
+        modalVideo.src = mediaSrc;
+        modalVideo.style.display = "block"; // Show video
+        modalVideo.autoplay = true; // Auto play
+        modalVideo.loop = true; // Loop the video
+        modalVideo.muted = true; // Mute the video to enable autoplay in most browsers
+        modalVideo.controls = false; // Hide the video controls (progress bar, play/pause, etc.)
+        modalVideo.load(); // Ensure the video is loaded
     } else {
-        modalImg.src = imageSrc; // Default for larger screens
+        // Change image source based on screen size (for images)
+        if (window.innerWidth <= 930) { // For smaller screens
+            if (mediaSrc.includes("supply.png")) {
+                modalImg.src = './images/supplains.png'; // Smaller image for supply
+            } else if (mediaSrc.includes("invest.png")) {
+                modalImg.src = './images/involi.png'; // Smaller image for invest
+            } else if (mediaSrc.includes("HR ANALYTIC.png")) {
+                modalImg.src = './images/atritt.png'; // Smaller image for HR Analytics
+            } else if (mediaSrc.includes("housing.png")) {
+                modalImg.src = './images/haus.png'; // Smaller image for Housing
+            } else if (mediaSrc.includes("BUSINESS PERF.png")) {
+                modalImg.src = './images/busperf.png'; // Smaller image for Business Perf
+            } else if (mediaSrc.includes("bank churn.png")) {
+                modalImg.src = './images/banny.png'; // Smaller image for Bank Churn
+            } else {
+                modalImg.src = mediaSrc; // Default for other images
+            }
+        } else {
+            modalImg.src = mediaSrc; // Default for larger screens
+        }
+
+        // Show the image element
+        modalImg.style.display = "block"; // Show image
     }
 
     modalLink.href = projectLink;
 
-    // Delay the display of the modal by 3 seconds (3000 milliseconds)
+    // Delay the display of the modal by 1 second (1000 milliseconds)
     setTimeout(function() {
-        // Display the modal after the delay
         modal.style.display = "block";
-    }, 1000);  // 3000 milliseconds = 3 seconds
+    }, 1000); // 1000 milliseconds = 1 second
 }
 
 // Close the modal when the user clicks the close button or outside the modal
 document.querySelector('.close').onclick = function() {
-    document.getElementById("myModal").style.display = "none";
+    const modal = document.getElementById("myModal");
+    modal.style.display = "none";
+
+    // Pause the video when closing the modal
+    const modalVideo = document.getElementById("modal-video");
+    if (modalVideo) {
+        modalVideo.pause(); // Pause the video
+        modalVideo.src = ""; // Reset the video source
+    }
 };
 
+// Handle outside clicks to close the modal
 window.onclick = function(event) {
     const modal = document.getElementById("myModal");
     if (event.target == modal) {
         modal.style.display = "none";
+
+        // Pause the video when closing the modal
+        const modalVideo = document.getElementById("modal-video");
+        if (modalVideo) {
+            modalVideo.pause(); // Pause the video
+            modalVideo.src = ""; // Reset the video source
+        }
     }
 };
-
-// Function to handle the card expansion
-function toggleCard(card) {
-    // Check if the screen width is 430 pixels or below
-    if (window.innerWidth > 430) {
-        return; // Do nothing if the screen is wider than 430 pixels
-    }
-
-    const isExpanded = card.classList.contains('expanded');
-    
-    // Collapse all cards
-    document.querySelectorAll('.card').forEach(c => {
-        c.classList.remove('expanded');
-        c.style.height = '50px'; // Set collapsed height
-    });
-
-    // If the clicked card was not already expanded, expand it
-    if (!isExpanded) {
-        card.classList.add('expanded');
-        card.style.height = '150px'; // Set the desired expanded height
-    }
-}
-
-// Attach the click event to each card
-document.querySelectorAll('.card').forEach(card => {
-    card.addEventListener('click', function() {
-        toggleCard(this);
-    });
-});
