@@ -13,6 +13,7 @@
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <img src="" id="modal-img" alt="Project Image" style="width: 100%; height: auto;"/>
+                    <video id="modal-video" controls style="display:none;"></video>
                     <div class="modal-footer">
                         <a href="" id="modal-link" target="_blank">
                         <button class="btn">Visit Project</button>
@@ -28,86 +29,87 @@
               <p>Explore a variety of visualizations designed using different platforms, including HTML/CSS, Tableau and Excel. Stay tuned for periodic updates with new visualizations as they become available.</p>
           </div>
   
-          <div class="wrapper">
+           <div class="wrapper">
               <div class="container">
                   <!-- Card 1 -->
                   <input type="radio" name="slide" id="c1" checked>
-                  <label for="c1" class="card" onclick="openModal('./images/marmodal.png', 'https://lagos-markets.onrender.com/')">
+                  <label for="c1" class="card" onclick="openModal('./images/supply.png', 'https://public.tableau.com/app/profile/peace1445/viz/SupplyChain_17066175898010/SupplyChain')">
                       <div class="row">
                           <div class="icon">1</div>
                           <div class="description">
-                              <h4 class="gelatin-effect">Markets Among Stars!</h4>
-                              <p>HTML/CSS/JS</p>
+                              <h4 class="gelatin-effect" style="color: rgb(2, 2, 2);">Supply Chain</h4>
+                              <p>Tableau</p>
                           </div>
                       </div>
                   </label>
                   
                   <!-- Card 2 -->
                   <input type="radio" name="slide" id="c2">
-                  <label for="c2" class="card" onclick="openModal('./images/SUPPLY.PNG', 'https://public.tableau.com/app/profile/peace1445/viz/SupplyChain_17066175898010/SupplyChain')">
+                  <label for="c2" class="card" onclick="openModal('./images/invest.png', 'https://drive.google.com/file/d/11pwgkSGEg-yyZguR2Pb6sjKzmhJtoWtK/view?usp=drive_link')">
                       <div class="row">
                           <div class="icon">2</div>
-                          <div class="description">
-                              <h4 class="gelatin-effect" style="color: rgb(41, 4, 109);">Supply Chain</h4>
-                              <p>Tableau</p>
-                          </div>
-                      </div>
-                  </label>
-                  <!-- Card 3 -->
-                  <input type="radio" name="slide" id="c3">
-                  <label for="c3" class="card" onclick="openModal('./images/invest.png', 'https://drive.google.com/file/d/11pwgkSGEg-yyZguR2Pb6sjKzmhJtoWtK/view?usp=drive_link')">
-                      <div class="row">
-                          <div class="icon">3</div>
                           <div class="description">
                               <h4 class="gelatin-effect" style="color: rgb(41, 4, 109);">Investment Portfolo</h4>
                               <p>Excel</p>
                           </div>
                       </div>
                   </label>
-                  <!-- Card 4 -->
-                  <input type="radio" name="slide" id="c4">
-                  <label for="c4" class="card" onclick="openModal('./images/HR ANALYTIC.png', 'https://public.tableau.com/app/profile/peace1445/viz/test1_17062298117580/ANALYTICSDASHBOARD2')">
+
+                  <!-- Card 3 -->
+                  <input type="radio" name="slide" id="c3">
+                  <label for="c3" class="card" onclick="openModal('./images/HR ANALYTIC.png', 'https://public.tableau.com/app/profile/peace1445/viz/test1_17062298117580/ANALYTICSDASHBOARD2')">
                       <div class="row">
-                          <div class="icon">4</div>
+                          <div class="icon">3</div>
                           <div class="description">
                               <h4 class="gelatin-effect" style="color: rgb(41, 4, 109);">HR Attrition</h4>
                               <p>Tableau</p>
                           </div>
                       </div>
                   </label>
-                  <!-- Card 5 -->
-                  <input type="radio" name="slide" id="c5">
-                  <label for="c5" class="card" onclick="openModal('./images/HOUSING.PNG', 'https://public.tableau.com/app/profile/peace1445/viz/housing_17200263952120/HousingLagos')">
+                  <!-- Card 4 -->
+                  <input type="radio" name="slide" id="c4">
+                  <label for="c4" class="card" onclick="openModal('./images/HOUSING.PNG', 'https://public.tableau.com/app/profile/peace1445/viz/housing_17200263952120/HousingLagos')">
                       <div class="row">
-                          <div class="icon">5</div>
+                          <div class="icon">4</div>
                           <div class="description">
                               <h4 class="gelatin-effect" style="color: rgb(41, 4, 109);">Housing in Lagos</h4>
                               <p>Tableau</p>
                           </div>
                       </div>
                   </label>
-                  <!-- Card 6 -->
-                  <input type="radio" name="slide" id="c6">
-                  <label for="c6" class="card" onclick="openModal('./images/BUSINESS PERF.PNG', 'https://public.tableau.com/app/profile/peace1445/viz/BUSINESSPERFORMANCEANALYSIS/Dashboard1')">
+                  <!-- Card 5 -->
+                  <input type="radio" name="slide" id="c5">
+                  <label for="c5" class="card" onclick="openModal('./images/BUSINESS PERF.png', 'https://public.tableau.com/app/profile/peace1445/viz/BUSINESSPERFORMANCEANALYSIS/Dashboard1')">
                       <div class="row">
-                          <div class="icon">6</div>
+                          <div class="icon">5</div>
                           <div class="description">
                               <h4 class="gelatin-effect" style="color: rgb(41, 4, 109);">Business Performance</h4>
                               <p>Tableau</p>
                           </div>
                       </div>
                   </label>
-                  <!-- Card 7 -->
-                  <input type="radio" name="slide" id="c7">
-                  <label for="c7" class="card" onclick="openModal('./images/BANK CHURN.PNG', 'https://public.tableau.com/app/profile/peace1445/viz/BankCustomerDepartureAnalysis_/Dashboard1')">
+                  <!-- Card 6 -->
+                  <input type="radio" name="slide" id="c6">
+                  <label for="c6" class="card" onclick="openModal('./images/BANK CHURN.PNG', 'https://public.tableau.com/app/profile/peace1445/viz/BankCustomerDepartureAnalysis_/Dashboard1')">
                       <div class="row">
-                          <div class="icon">7</div>
+                          <div class="icon">6</div>
                           <div class="description">
                               <h4 class="gelatin-effect" style="color: rgb(41, 4, 109);">Banking Analysis</h4>
                               <p>Tableau</p>
                           </div>
                       </div>
                   </label>
+                  <!-- Card 7 -->
+                  <input type="radio" name="slide" id="c7">
+                  <label for="c7" class="card" onclick="openModal('./images/lamarkets.mp4', 'https://lagos-markets.onrender.com/')">
+                    <div class="row">
+                        <div class="icon">7</div>
+                        <div class="description">
+                            <h4 class="gelatin-effect">Markets Among Stars!</h4>
+                            <p>HTML/CSS/JS</p>
+                        </div>
+                    </div>
+                </label>
                   <!-- Card 8 -->
                   <!-- <input type="radio" name="slide" id="c8">
                   <label for="c8" class="card" onclick="openModal('./static/images/supply.jpg', 'https://public.tableau.com/app/profile/peace1445/viz/SupplyChain_17066175898010/SupplyChain')">
